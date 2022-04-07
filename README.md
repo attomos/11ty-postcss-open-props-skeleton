@@ -1,4 +1,4 @@
-# 11ty PostCSS Open Props Skeleton
+# 11ty PostCSS + Open Props Skeleton
 
 Minimum 11ty setup with [nunjucks
 template](https://mozilla.github.io/nunjucks/), [PostCSS](https://postcss.org/),
