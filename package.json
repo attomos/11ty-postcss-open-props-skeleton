@@ -1,0 +1,27 @@
+{
+  "name": "11ty-postcss-open-props-skeleton",
+  "version": "1.0.0",
+  "description": "Minimum 11ty setup with nunjucks template, PostCSS, and Open Props.",
+  "main": "index.html",
+  "scripts": {
+    "watch:11ty": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "watch:postcss": "postcss src/styles/*.css --dir public/css --watch",
+    "build:postcss": "postcss src/styles/*.css --dir public/css",
+    "start": "npm-run-all build:postcss --parallel watch:*",
+    "build": "npm-run-all build:postcss build:eleventy",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "author": "Nattaphoom Chaipreecha",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.7",
+    "npm-run-all": "^4.1.5",
+    "open-props": "^1.3.12",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-jit-props": "^1.0.5"
+  }
+}
